@@ -103,7 +103,10 @@ function init() {
     render.canvas.addEventListener('click', (e) => trySpawnBanana(e.clientX, e.clientY));
     render.canvas.addEventListener('touchend', (e) => {
         e.preventDefault();
-        trySpawnBanana(mouseX, mouseY);
+        if (e.changedTouches.length > 0) {
+            const t = e.changedTouches[0];
+            trySpawnBanana(t.clientX, t.clientY);
+        }
     });
 
     // GUI
