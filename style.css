@@ -41,8 +41,9 @@ canvas {
     display: flex;
 }
 
-/* Force lil-gui to be smaller and readable */
-.lil-gui {
+/* Force lil-gui to be smaller and readable, EVEN ON MOBILE */
+.lil-gui,
+.lil-gui.mobile {
     font-size: 9px !important;
     --font-size: 9px !important;
     --width: 160px !important;
@@ -58,13 +59,15 @@ canvas {
 }
 
 /* Remove gaps between folders/items */
-.lil-gui .children {
+.lil-gui .children,
+.lil-gui.mobile .children {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
     border: none !important;
 }
 
-.lil-gui .title {
+.lil-gui .title,
+.lil-gui.mobile .title {
     height: 16px !important;
     line-height: 16px !important;
     font-size: 9px !important;
@@ -72,7 +75,8 @@ canvas {
     margin: 0 !important;
 }
 
-.lil-gui .controller {
+.lil-gui .controller,
+.lil-gui.mobile .controller {
     height: 14px !important;
     line-height: 14px !important;
     padding: 0 4px !important;
