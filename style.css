@@ -44,22 +44,45 @@ canvas {
 /* Force lil-gui to be smaller and readable */
 .lil-gui {
     font-size: 9px !important;
-    /* Reduced to 9px */
     --font-size: 9px !important;
-    --input-height: 18px !important;
-    --folder-indent: 10px !important;
+    --width: 160px !important;
+    /* Much narrower frame */
+    --name-width: 45% !important;
+
+    /* Height adjustments */
+    --input-height: 14px !important;
+    /* Tighter rows */
+    --widget-height: 14px !important;
+    --spacing: 2px !important;
+    --padding: 3px !important;
+}
+
+/* Remove gaps between folders/items */
+.lil-gui .children {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    border: none !important;
 }
 
 .lil-gui .title {
     height: 16px !important;
-    /* Tighter title bar */
     line-height: 16px !important;
     font-size: 9px !important;
+    padding: 0 4px !important;
+    margin: 0 !important;
 }
 
 .lil-gui .controller {
-    height: 18px !important;
-    line-height: 18px !important;
+    height: 14px !important;
+    line-height: 14px !important;
+    padding: 0 4px !important;
+    margin: 0 !important;
+    /* No gaps between rows */
+}
+
+.lil-gui .controller .name {
+    line-height: 14px !important;
+    padding-right: 4px !important;
 }
 
 #ui-layer {
